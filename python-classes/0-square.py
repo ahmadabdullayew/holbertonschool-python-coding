@@ -13,7 +13,7 @@ class Square:
     def __init__(self, size):
         """
         Yeni bir Square örneğini başlatır.
-        
+
         Args:
             size (int): Karenin boyutu (kenar uzunluğu).
         """
