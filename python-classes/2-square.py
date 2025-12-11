@@ -24,3 +24,11 @@ class Square:
         except (TypeError, ValueError) as e:
             print(e)
             self.__size = 0
+    def area(self):
+        """
+        Calculates the area of the square.
+        
+        Returns:
+            float: The area of the square.
+        """
+        return self.__size ** 2
