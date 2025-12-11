@@ -1,46 +1,41 @@
 #!/usr/bin/python3
 """
-Square module: Defines a Square class that manages its size
-with validation and provides a method to compute its area.
+Square module: Defines a Square class with validated size,
+area computation, and print functionality.
 """
+
+
 class Square:
     """
-    Defines a square with a validated private size attribute.
+    Defines a square with size validation.
     """
+
     def __init__(self, size=0):
-        self.__size = size
+        self.size = size
+
     @property
     def size(self):
-        """
-        Computes the area of the square.
-        Returns:
-            float: The area of the square.
-        """
+        """Getter for size."""
         return self.__size
-    @size.setter
-    def size(self):
-        if not isinstance(self.size, (int, float)):
-            raise TypeError("size must be a number")
-        if self.size < 0:
-            raise ValueError("size must be >= 0")
 
-        self.__size = self.size
-    
+    @size.setter
+    def size(self, value):
+        """Setter for size with validation."""
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        if value < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = value
+
     def area(self):
-        """
-        Computes the area of the square.
-        Returns:
-            float: The area of the square.
-        """
-        return self.__size ** 2 
-    
+        """Returns the area of the square."""
+        return self.__size ** 2
+
     def my_print(self):
-        """
-        Prints the square using the '#' character.
-        If size is 0, prints an empty line.
-        """
+        """Prints the square using '#' characters."""
         if self.__size == 0:
             print()
             return
-        for _ in range(int(self.__size)):
-            print('#' * int(self.__size))
+
+        for _ in range(self.__size):
+            print("#" * self.__size)
