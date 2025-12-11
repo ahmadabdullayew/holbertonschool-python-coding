@@ -16,7 +16,7 @@ class Square:
         Returns:
             float: The area of the square.
         """
-        return self.__size ** 2
+        return self.__size
     @property
     def size(self):
         if not isinstance(self.size, (int, float)):
