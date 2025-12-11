@@ -4,6 +4,7 @@
 attribute size and validates size for type (integer) and value (>= 0).
 """
 
+
 class Square:
     """
     Defines a square by its size, with validation upon instantiation.
@@ -16,8 +17,8 @@ class Square:
             size (int): The length of the side of the square (default: 0).
         
         Raises:
-            TypeError: If size is not an integer.
-            ValueError: If size is less than 0.
+            TypeError: If size is not an integer (size must be an integer).
+            ValueError: If size is less than 0 (size must be >= 0).
         """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
