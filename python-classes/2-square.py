@@ -1,25 +1,7 @@
-#!/usr/bin/python3
-"""
-1-square module: Defines the Square class, which manages the size
-of a square, enforces type and value validation, and can calculate
-its area.
-"""
-
-
+k#!/usr/bin/python3
 class Square:
-    """
-    A class that defines a square by its private instance attribute: size.
-    It uses getter and setter properties for validation control.
-    """
-
     def __init__(self, size=0):
-        """
-        Initializes a new Square instance.
-
-        Args:
-            size (int/float): The length of the side of the square (default: 0).
-        """
-        try:
+        try:    
             if not isinstance(size, (int, float)):
                 raise TypeError("size must be a number")
             if size < 0:
@@ -28,12 +10,5 @@ class Square:
         except (TypeError, ValueError) as e:
             print(e)
             self.__size = 0
-
     def area(self):
-        """
-        Calculates the area of the square.
-
-        Returns:
-            float: The area of the square.
-        """
         return self.__size ** 2
