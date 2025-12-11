@@ -1,4 +1,4 @@
-kk#!/usr/bin/python3
+#!/usr/bin/python3
 """
 Square module: Defines a Square class that manages its size
 with validation and provides a method to compute its area.
